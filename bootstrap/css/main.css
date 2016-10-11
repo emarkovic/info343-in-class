@@ -1,0 +1,12 @@
+/* 
+our styles go here
+since this file is added after Bootstrap's CSS,
+we can override their formatting as needed
+*/
+
+body {
+    /* since the navbar is fixed to the top of the body,
+    and is 50px tall, we need that much padding so that
+    the content doesn't start under the navbar*/
+    padding-top: 50px;
+}

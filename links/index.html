@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Styling Links</title>
+    
+    <!--font awesome-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    
+    <!--our own stylesheet-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main>
+        <p>
+            <!--links with just icons in them can't be read by a screen reader--what do we need to add?-->
+            <a class="icon-link" href="https://www.google.com"><i class="fa fa-google" aria-hidden="true"></i></a>
+        </p>
+
+        <p>
+            <!--lets make this link look and act like a button-->
+            <a class="button-link" href="https://www.google.com">Search on Google</a>
+        </p>
+    </main>
+</body>
+</html>

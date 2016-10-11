@@ -1,0 +1,31 @@
+/* styles for the flexbox exercise */
+
+/* By default the `width` property affects only the width of the
+content are within an element, and padding is then added on top 
+of that. Setting `box-sizing` to `border-box` tells the browser 
+that `width` applies to the entire element width, including
+padding and borders */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+}
+
+svg {
+	width: 40px;
+}
+
+h2 {
+	margin-top: 0;
+}
+
+.container {
+	padding: 10px;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+/* add your styles here */

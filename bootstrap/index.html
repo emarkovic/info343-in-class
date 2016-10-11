@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Bootstrap Demo</title>
+
+    <!--Bootstrap stylesheet CDN link from http://getbootstrap.com/getting-started/-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--our stylesheet, in which we can override Bootstrap's styles where needed-->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+    <!--start of the responsive navigation bar-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <!--container-fluid class adds a little padding, but doesn't constrain width-->
+        <div class="container-fluid">
+            <!--navbar header, which includes hamburger menu button and branding-->
+            <div class="navbar-header">
+                <!--hamburger menu button, shown only on narrow screens.
+                `data-target` specifies a selector for the element containing the
+                navigation links you want to hide/show when the button is clicked.
+                `data-toggle` tells Bootstrap to toggle the `collapse` state,
+                thereby hiding/showing the element selected by `data-target`.
+                in this case, the selector is #site-nav-links, which selects
+                the element with id="site-nav-links" (just like CSS selectors)
+                -->
+                <button type="button" 
+                    class="navbar-toggle collapsed" 
+                    data-target="#site-nav-links" 
+                    data-toggle="collapse"  
+                    aria-expanded="false">
+
+                    <!--the hamburger icon itself, which Bootstrap creates
+                    by stacking three bar icons on top of each other
+                    the `sr-only` element is for screen readers-->
+                    <span class="sr-only">toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--branding content, which always remains visible-->
+                <a class="navbar-brand" href="#">
+                    Dawg Coffee
+                </a>
+            </div>
+
+            <!--navigation links, which are always visible on wide sceens,
+            but go into a drop-down menu on narrow screens-->
+            <div class="collapse navbar-collapse" id="site-nav-links">
+                <!--the `navbar-right` class makes the links right-aligned on desktop-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#location">location</a></li>
+                    <li><a href="#menu">menu</a></li>
+                    <li><a href="#events">events</a></li>
+                    <li><a href="#order">order</a></li>
+                </ul>
+            </div>
+        
+        </div> <!--end of .container-fluid-->
+    </nav>
+
+    <!--rest of the page content goes here-->
+
+
+    <!--we add these script elements here so that they don't block page rendering
+    and interaction. sometimes users just wants to click a link and move on,
+    so we don't want to force them to wait while large JavaScript files are
+    downloaded, parsed, and executed.-->
+    <!--jQuery library CDN link from http://code.jquery.com/-->
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <!--Bootstrap JavaScript library CDN link from http://getbootstrap.com/getting-started/-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
