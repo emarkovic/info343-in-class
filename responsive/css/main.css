@@ -1,0 +1,44 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: 60px;
+    margin: 0;
+    padding-top: 100px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #777, #555);
+    color: #FFF;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+svg {
+    width: 40px;
+    fill: #555;
+}
+
+@media (min-width: 768px) {
+    .row {
+        display: flex;
+    }
+
+    .col {
+        flex-grow: 1;
+        margin: 0.25em;
+        padding: 5px;
+    }
+
+    header {
+        background-image: url(../img/banner-sm.jpg);
+        background-size: cover;
+        background-position: center;
+        color: #FFF;
+    }
+}
