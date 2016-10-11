@@ -20,7 +20,7 @@ If you don't finish this before the end of class, come back for the lab section 
 
 1. Switch to the `gh-pages` branch in your repo and merge all commits made to the `git-ex-1` branch into the `gh-pages` branch. We created this `gh-pages` branch in class, so if you were not in class, you will need to create the `gh-pages` branch first.
 1. Push the `gh-pages` branch to GitHub to publish your new `index.html` file on the web.
-1. Open a new browser tab and navigate to the following URL, replacing `your-user-name` with your GitHub username: `https://your-user-name.github.io/info343-in-class/git/exercises/index.html`. You should see your web page. If you don't, check your repository settings to ensure that your GitHub Pages site was published successfully.
+1. Open a new browser tab and navigate to the following URL, replacing `your-user-name` with your GitHub username: `https://your-user-name.github.io/info343-in-class/git/exercise/index.html`. You should see your web page. If you don't, check your repository settings to ensure that your GitHub Pages site was published successfully.
 
 ## Create a Pull Request and Merge
 
