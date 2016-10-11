@@ -3,3 +3,42 @@ body {
     font-size: 20px;
     padding: 1em;
 }
+
+.icon-link {
+	color: #333;
+}
+
+.icon-link:hover {
+	color: #f00;
+}
+
+.button-link {
+	color: #333;
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+	color: #222;
+	/*em = height of current font*/
+	padding: 0.5em 1em;
+	border-radius: 4px;
+
+	transition: all 500ms;
+}
+
+.button-link:hover {
+	background-color: #eee;	
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-in {
+	animation-name: fade-in;	
+	animation-duration: 1s;
+}
