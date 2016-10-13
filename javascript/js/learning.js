@@ -41,10 +41,14 @@ console.group("PRACTICE: Variables and Basic Types");
 //Create another variable named `y`, assign it the value
 //currently held in the variable `x`, and write the value
 //of `y` to the console log
+var y = x;
+console.log(y);
 
 
 //now assign `y` the numeric value 10
 //what does x contain now? Write it to the console
+y = 10;
+console.log(5)
 
 
 console.groupEnd();
@@ -78,6 +82,10 @@ console.group("PRACTICE: Strings");
 //with some text, and then create another string `s4`
 //and assign it the concatenation of `s2` and `s3`
 //then write it to the console so you can verify it worked.
+var s2 = 'hello';
+var s3 = 'goodbye';
+var s4 = s2 + s3;
+console.log('should say "hellogoodbye"', s4);
 
 
 //use the `.trim()` method to remove the leading and
@@ -154,9 +162,13 @@ console.group("PRACTICE: Objects");
 //Create another object for one of your other courses
 //assigning it to a new variable named `course2`
 //use console.log() to view it in the browser console
+var course2 = {};
+console.log(course2);
 
 //now try adding a property named `web site` (with a space)
 //setting it to some string value...it's tricky...
+course2['web site'] = 'hello.com';
+console.log(course2);
 
 
 
@@ -198,11 +210,14 @@ console.group("PRACTICE: Arrays");
 //--PRACTICE--
 //create another array of playing card suits
 //(clubs, diamonds, hearts, spades)
+var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
 
 
 //then add a new element named "jokers"
 //afer adding it, access it in the array
 //and log it to the console
+suits.push('jokers');
+console.log(suits[suits.length - 1]);
 
 
 
@@ -342,6 +357,16 @@ console.group("PRACTICE: Functions");
 //and returns the minimum of the two, or the first argument
 //if they are equal to each other. Then call it a few times
 //with various numbers to test it.
+function min(n1, n2) {
+    // if (num1 < num2 || num1 === num2) return num1;
+    // return num2;
+    return n2 < n1 ? n2 : n1; //stearns is too fancy
+}
+
+console.log(min(1, 1));
+console.log(min(1, 2));
+console.log(min(3, 2));
+
 
 
 console.groupEnd();
@@ -416,7 +441,13 @@ function generateRandomNumbers(howMany, minimum, maximum) {
     return randNums;
 }
 
-//>>> your code goes here!
+var arr = generateRandomNumbers(12, 1, 100);
+console.log(arr);
+arr.forEach(console.log);
+console.log(arr.map(function (num) { return num + 1}));
+
+
+console.log(arr.reduce(min, arr[0]));
 
 
 //now use the .sort() method on a generated array of random
@@ -426,6 +457,6 @@ function generateRandomNumbers(howMany, minimum, maximum) {
 //as numbers.
 //see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
-
+console.log(arr.sort(function (a, b) { return a - b}));
 
 console.groupEnd();
