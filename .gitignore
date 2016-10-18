@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 .vscode
 .idea
+lab/dom/js/main1.js
+lab/dom/index1.html

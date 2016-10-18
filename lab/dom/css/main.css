@@ -1,0 +1,101 @@
+/*General Styling*/
+html, body {
+	height: 100%;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+	margin: 0;	
+}
+
+h1 {
+	font-weight: lighter;
+	margin: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.grey {
+	background-color: #aaa;
+}
+
+.black {
+	background-color: #000;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.box {	
+	height: 100px;
+	width: 100px;
+	position: absolute;
+}
+
+.box:hover {
+	cursor: pointer;
+	border: black 1px dotted;
+	height: 98px;
+	width: 98px;
+}
+
+/*animations*/
+.transition {
+	transition: 1s ease;
+}
+
+.fade-to-black {
+	animation-name: fadeToBlack;
+	animation-duration: 500ms;
+}
+
+.fall {
+	transform: translate(0, 500px);
+}
+
+.float {
+	transform: translate(0, 0);
+}
+
+.fade-to-white {
+	animation-name: toWhite;
+	animation-duration: 200ms;
+}
+
+.fade-to-bg-color {
+	animation-name: toBgColor;
+	animation-duration: 200ms;
+}
+
+/*Add your own animation class or transform here*/
+
+@keyframes fadeToBlack {
+	from {
+		background-color: #aaa;
+	}
+	to {
+		background-color: #000;
+	}
+}
+
+@keyframes toWhite {
+	from {
+		background-color: #aaa;
+	}
+
+	to {
+		background-color: #fff;
+	}
+}
+
+@keyframes toBgColor {
+	from {
+		background-color: #fff;
+	}
+
+	to {		
+		background-color: #aaa;
+	}
+}
+
+/*If you are doing an animation, add your keyframe here*/
