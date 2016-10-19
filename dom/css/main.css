@@ -1,1 +1,15 @@
 /* put any app-specific style rules here */
+.sex-m {
+	background-color: #89cff0;
+}
+
+.sex-f {
+	background-color: pink;
+}
+
+#count-col-header {
+	cursor: pointer;
+}
+#count-col-header:hover {
+	color: #777;
+}

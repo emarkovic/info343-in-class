@@ -1,0 +1,33 @@
+body {
+    /*how do we tell what fonts we have?*/
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*in css a pixel is 1/96 th of an inch becuase pixels on different screens are different*/
+    font-size: 18px;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 60px;
+    margin-top: 0;
+}
+
+header {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../banner.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+    color: #FFF;
+    padding: 10px;
+
+}
+
+/*header > p direct child*/
+/*descendant selector*/
+header p {
+    font-style: italic;
+}
+
+main {
+    padding: 10px;
+}
