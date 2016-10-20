@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+/*used to constraint content width*/
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header > .container {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    flex-grow: 1;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-form .mdl-input {
+    flex-grow: 1;
+}
+
+/*MDL text fields are only 300px wide by default, so expand to 100%*/
+.mdl-textfield {
+    width: 100%;
+}
+
+/*used to hide/show the ajax feedback spinner*/
+.hidden {
+    display: none;
+}
+
+.query-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*constraint width and height of preview images, and make them look clickable*/
+.query-results img {
+    width: 160px;
+    height: 160px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: #D00;
+    font-size: 150%;
+}
