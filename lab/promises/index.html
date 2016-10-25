@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="css/main.css" rel="stylesheet">
+		<title>Promises Challenge</title>
+	</head>
+	<body>
+		
+		<header>
+		    <div class="container">
+		      	<h1>Promises Challenge <br>
+		      	<span class="subtext">I <em>promise</em> it's not too tough</span></h1>
+		    </div>
+		</header>
+		<section>
+		  	<div class="container">
+		    	<div class="row">
+		      		<div class="col-sm-6">
+		        		<h2>Weather</h2>
+		        		<p>Lets get the weather. Hit that button.</p>
+		        		<button class="btn btn-primary btn-lg" id="fetch-weather">weather</button>
+		        		<div id="weather-results">		        			
+		        		</div>
+		      		</div>
+		      		<div class="col-sm-6">
+		        		<h2>Parallel vs Serial</h2>
+				        <p>
+				          	Clicking the buttons, and it will return the sum of all the values of the promises! (It should be 37)
+				        </p>
+				        <p>
+				          	Parallel should only take as long as the longest promise.
+				        </p>
+				        <p>
+				          	Serial should take as long as the sum of the time for each promise
+				        </p>
+				        <button class="btn btn-lg btn-primary" id="parallel-promise">parallel</button>
+				        <button class="btn btn-lg btn-primary" id="serial-promise">serial</button>
+				        <h3>
+				          	Slow Result: 				          
+				          	<span id="slow-result"></span>
+				        </h3>
+				        <h3>
+				        	Fast Result:
+				        	<span id="fast-result"></span>
+				        </h3>
+		     		</div>
+		    	</div>
+		  	</div>
+		</section>
+		<script src="js/promise.js"></script>
+	</body>	
+</html>

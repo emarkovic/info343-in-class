@@ -1,0 +1,24 @@
+.new-task-form {
+    margin-bottom: 1em;
+}
+
+.task-list {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.task-list li {
+    cursor: pointer;
+}
+
+.task-creation {
+    margin-left: 1rem;
+    font-size: 80%;
+    color: #888;
+}
+
+.done .task-title,
+.done .task-creation {
+    color: #AAA;
+    text-decoration: line-through;
+}
