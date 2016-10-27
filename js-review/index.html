@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>JavaScript Review</title>
+
+    <!--Bootstrap stylesheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="icon" href="img/page-icon.png">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JavaScript Review!</h1>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <p>Right-click and choose "Inspect", or hit <code>Cmd+Opt+i</code> on Mac, <code>Ctrl+Alt+i</code> on Windows, to open the browser developer tools. Then switch to the Console tab to see script errros and <code>console.log()</code> output</p>
+
+            <p>
+                <button class="btn btn-primary btn-click-me">Click Me!</button>
+            </p>
+
+            <div id="report"></div>
+
+        </div>
+    </main>
+
+    <!--moment.js and numeral.js formatting libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment-with-locales.min.js"></script>
+    
+    <!--script that declares one global variable `BABYNAMES`, which is an array of objects-->
+    <!--all scripts added after this will have access to that global variable-->
+    <script src="data/babynames-1996.js"></script>
+
+    <!--our scripts-->
+    <script src="js/review.js"></script>
+    <script src="js/dom-review.js"></script>
+</body>
+</html>

@@ -26,19 +26,9 @@
 */
 
 //part 2 code
-
-/*
-  Part 3: Modify the promise factory to create promises that can FAIL
-  
-  - The promise factory currently only returns promises that resolve
-  - Use the deferred.fail() method to instead make it fail (https://api.jquery.com/deferred.fail/)
-  - Now update you're code to handle dealing with these errors!
-  - Congrats, you can now model asynchronous events entirely in your code :)
-*/
  
 
-
-// This is for parts 2 and 3. 
+// This is for parts 2. 
 // Creates a promise that will take delay ms before resolving with the given value
 // Don't worry about how this works, but if you want you're curious feel free to ask
 function promiseFactory(delay, value) {

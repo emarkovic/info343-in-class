@@ -1,5 +1,8 @@
 # promises-challenge
 
+## Set up your dev environment
+Follow [these](https://github.com/info343-a16/info343-in-class) instructions.
+
 ## What's a promise?
 
 As you already know, when doing web programming you'll often make calls to a
