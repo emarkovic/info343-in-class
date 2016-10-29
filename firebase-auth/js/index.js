@@ -7,8 +7,12 @@ var passwordInput = document.getElementById("password-input");
 signUpForm.addEventListener("submit", function(evt) {
     evt.preventDefault();
 
-    //use Firebase to sign in 
-    //using the email name and password...
+    firebase.auth().signInWithEmailAndPassword(emailInput.value, passwordInput.value)
+    	.then(() => {
+    		window.location = "secure.html"
+    	}).catch((error) => {
+    		alert(error.message)
+    	});
 
 
 

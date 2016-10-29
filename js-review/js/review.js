@@ -108,7 +108,8 @@ logValue("2016-10-27", formatAsDate);
  * as a currency instead.
  */
 var someNumber = 123456789;
-//logValue(...)
+logValue(someNumber, formatAsNumber);
+logValue(someNumber, formatAsCurrency);
 
 
 
@@ -190,7 +191,9 @@ console.log("property names:", propNames);
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
 
-
+propNames.forEach(name => {
+    console.log(name + ' = ' + course[name]);
+});
 
 
 
@@ -340,6 +343,21 @@ var totalCount = BABYNAMES.reduce(function(curTotal, record) {
 
 console.log("Total count", formatAsNumber(totalCount));
 
+
+// closures
+
+function compareByProp(prop) {
+    return function (rec1, rec2) {
+        switch(typeof rec1[prop]) {
+            case 'string': 
+                return rec1[prop].localeCompare(rec2[prop]);
+            case 'number':
+                return rec1[prop] - rec2[prop];
+        }
+    }
+}
+BABYNAMES.sort(compareByProp('count'));
+
 /**
  * PRACTICE
  * now sort the `males` array by count *descending*
@@ -350,7 +368,10 @@ console.log("Total count", formatAsNumber(totalCount));
  * a comma, delimited list. To sort descending,
  * just reverse the logic in your compare function.
  */
-
+var males2 = males.sort((obj1, obj2) => {
+    return -(obj1.count - obj2.count);
+}).splice(0, 10).join(', ');
+console.log(males2);
 
 
 /**
@@ -368,8 +389,23 @@ console.log("Total count", formatAsNumber(totalCount));
  * data by total count descending, slice off the 
  * top 10 and write those to the console.
  */
+var names = {};
+BABYNAMES.forEach(obj => {
+    if (!names[obj.name]) {
+        names[obj.name] = {};
+        names[obj.name].count = 0;
+    }
+    names[obj.name].count += obj.count;
+});
 
-
+var namesOnly = Object.keys(names);
+namesOnly.sort((name1, name2) => {
+    return -(names[name1].count - names[name2].count);
+})
+namesOnly = namesOnly.slice(0, 10);
+namesOnly.forEach(name => {
+    console.log(name + ' = ' + names[name].count);
+})
 
 
 
