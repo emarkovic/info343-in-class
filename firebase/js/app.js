@@ -79,7 +79,7 @@ function renderTask(snapshot) {
 	}
 
 	li.addEventListener('click', function () {
-		snapshot.ref.update({
+		snapshot.ref .update({
 			done: !task.done
 		});
 	});
