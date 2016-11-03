@@ -41,7 +41,7 @@ class DataTable extends React.Component {
                 <thead>
                     <tr>
                         {keys.map(key => {
-                            var caption = key;
+                            var caption = key;                            
                             if (colMeta[key] && colMeta[key].caption) {
                                 caption = colMeta[key].caption;
                             }
