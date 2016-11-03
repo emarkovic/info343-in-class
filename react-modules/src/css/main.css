@@ -1,0 +1,16 @@
+.repo {
+    display: flex;
+}
+
+.repo img {
+    width: 100px;
+}
+
+.repo .repo-info {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.repo-info h2 {
+    margin-top: 0;
+}
