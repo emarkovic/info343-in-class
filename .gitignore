@@ -4,3 +4,6 @@ node_modules
 .idea
 lab/dom/js/main1.js
 lab/dom/index1.html
+lab/react/src/appSolution.jsx
+lab/react/src/SearchCitySolution.jsx
+lab/react/src/WeatherCardSolution.jsx

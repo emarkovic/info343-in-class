@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">	
+		<script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>	
+		<link rel="stylesheet" href="css/main.css">		
+		<title>Weather</title>
+	</head>
+	<body>	
+		<div id="app">	
+			<main class="container">
+				<h1 class="center-text">Current Weather</h1>
+				<div class="form-house">
+					<form 
+						class="search-form"
+					>
+					  	<div class="mdl-textfield mdl-js-textfield">
+					    	<input 
+					    		class="mdl-textfield__input" 
+					    		type="text" 
+					    		id="search-input" 
+					    		placeholder="Search a city..."
+					    	/>
+					    	<label 
+					    		class="mdl-textfield__label" 
+					    		for="search-input"
+					    	></label>					  		
+					  	</div>					  	
+					  	<button type="submit" class="mdl-button mdl-js-button mdl-button--icon">
+						    <i class="material-icons">search</i>
+						</button>
+					</form>	
+				</div>		
+				<div>
+					<div class="button-house">
+						<button class="mdl-button mdl-js-button mdl-button--primary button-clicked">
+						  &#176;F
+						</button>
+						<button class="mdl-button mdl-js-button mdl-button--primary">
+						  &#176;C
+						</button>					
+					</div> 
+					<div id="weather-area">
+						<div class="demo-card-square mdl-card mdl-shadow--2dp weather-card">
+						    <div class="mdl-card__supporting-text">
+						    	<p class="weather-text center-text">this.props.data.name</p>
+						    	<p class="weather-text center-text">moment().format('dddd, h:mm a')</p>
+						    	<p class="weather-text center-text">this.props.data.weather[0].description</p>					    	
+						    	<h2 class="weather-temp center-text">
+						    		<img 
+						    			class="weather-img" 
+						    			src="http://openweathermap.org/img/w/01d.png" 
+						    			alt="this.props.data.weather[0].description" 
+						    		/>
+						    		<span>56 &#176;F</span>
+						    	</h2>
+						    </div>				    
+						</div>						
+					</div>
+				</div>								              
+            </main>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment-with-locales.min.js"></script>
+	</body>
+</html>

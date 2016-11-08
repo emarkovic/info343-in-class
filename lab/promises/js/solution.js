@@ -42,7 +42,7 @@ var url = 'http://api.openweathermap.org/data/2.5/weather?';
 var weatherBtn = document.getElementById('fetch-weather');
 var weatherResults = document.getElementById('weather-results');
  
-var result = fetch('https://freegeoip.net/json/')
+ var result = fetch('https://freegeoip.net/json/')
  	.then(parse)
  	.then(fetchWeather); 	
 
