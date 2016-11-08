@@ -1,5 +1,7 @@
 import React from "react";
 
+import {Link, IndexLink} from 'react-router';
+
 //import our CSS file
 //Webpack will actually merge the contents
 //of this file into an inline <style></style>
@@ -20,8 +22,18 @@ export default class extends React.Component {
     render() {
         return (
             <div>
-                <main>
-                    <h1>Hello React!</h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <IndexLink to="/" activeClassName="active">Products</IndexLink>
+                        </li>
+                        <li>
+                            <Link to="/cart" activeClassName="active">Cart</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <main>                    
+                    {this.props.children}
                 </main>
             </div>
         );

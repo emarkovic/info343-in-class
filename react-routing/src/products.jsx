@@ -8,7 +8,9 @@ import React from "react";
 //simply by importing it's module name
 import "whatwg-fetch";
 
-const APIKEY = "...your api key...";
+import Movie from './Movie.jsx';
+
+const APIKEY = "0b5e00af262abbae8aebb38333034029";
 const BASE_URL = "https://api.themoviedb.org/3"
 const DISCOVER_API = BASE_URL + "/discover/movie?api_key=" + APIKEY;
 const GENRES_API = BASE_URL + "/genre/movie/list?api_key=" + APIKEY;
@@ -21,12 +23,27 @@ export default class extends React.Component {
         this.state = {}
     }
 
+    componentDidMount() {
+        fetch(DISCOVER_API)
+            .then(response => response.json())
+            .then(data => {this.setState({movies: data})});
+    }
+
     render() {
+        var totalPages;
+        var movies;
+        if (this.state.movies) {
+            totalPages = <p>{this.state.movies.total_pages} pages</p>;
+            movies = [];            
+            movies = this.state.movies.results.map(m => <Movie key={m.id} movie={m} />)
+        }
         return (
             <div className="container">
                 <h1>Products View</h1>
                 <p>some nifty products for sale</p>
-            </div>
+                {totalPages}  
+                {movies}              
+            </div>            
         );
     }
 }
